@@ -26,21 +26,21 @@ overflow-x:hidden;
 /* NAVBAR */
 
 nav{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 8%;
-background:rgba(0,0,0,0.7);
-backdrop-filter:blur(14px);
-position:fixed;
-width:100%;
-top:0;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(12px);
 z-index:1000;
 border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
 .logo{
-font-size:30px;
+font-size:32px;
 font-weight:800;
 letter-spacing:3px;
 color:#00ffae;
@@ -52,12 +52,12 @@ list-style:none;
 }
 
 nav ul li{
-margin-left:25px;
+margin-left:30px;
 }
 
 nav ul li a{
 text-decoration:none;
-color:#fff;
+color:white;
 font-weight:500;
 transition:0.3s;
 }
@@ -70,38 +70,34 @@ color:#00ffae;
 
 .hero{
 height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
-background:
-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
-url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
 }
 
-.hero-content{
-max-width:800px;
-}
-
-.hero h1{
-font-size:70px;
+.hero-content h1{
+font-size:80px;
 font-weight:800;
+line-height:1.1;
 margin-bottom:20px;
-line-height:1.2;
 }
 
-.hero h1 span{
+.hero-content h1 span{
 color:#00ffae;
 }
 
-.hero p{
-color:#ddd;
+.hero-content p{
 font-size:20px;
+color:#ccc;
 margin-bottom:35px;
-line-height:1.7;
+max-width:700px;
 }
 
 .hero-btn{
@@ -110,8 +106,8 @@ padding:16px 40px;
 background:#00ffae;
 color:black;
 border-radius:50px;
-text-decoration:none;
 font-weight:700;
+text-decoration:none;
 transition:0.3s;
 }
 
@@ -124,8 +120,8 @@ box-shadow:0 0 25px #00ffae;
 
 .section-title{
 text-align:center;
-font-size:42px;
-margin:80px 0 50px;
+font-size:45px;
+margin:90px 0 50px;
 font-weight:700;
 }
 
@@ -133,45 +129,44 @@ font-weight:700;
 
 .products{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
 padding:0 8% 100px;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
-border-radius:22px;
+background:#111;
+border-radius:25px;
 overflow:hidden;
-backdrop-filter:blur(12px);
 transition:0.4s;
+border:1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-12px);
 box-shadow:0 0 30px rgba(0,255,174,0.25);
 }
 
 .card img{
 width:100%;
-height:320px;
+height:360px;
 object-fit:cover;
 }
 
 .card-content{
-padding:20px;
+padding:22px;
 }
 
 .card-content h3{
-font-size:24px;
+font-size:25px;
 margin-bottom:12px;
 }
 
 .price{
 color:#00ffae;
-font-size:22px;
+font-size:24px;
 font-weight:700;
-margin-bottom:15px;
+margin-bottom:18px;
 }
 
 .buy-btn{
@@ -179,8 +174,8 @@ display:inline-block;
 padding:12px 28px;
 background:#00ffae;
 color:black;
-text-decoration:none;
 font-weight:700;
+text-decoration:none;
 border-radius:40px;
 transition:0.3s;
 }
@@ -189,41 +184,80 @@ transition:0.3s;
 background:white;
 }
 
-/* SLIDER */
+/* BANNER */
 
-.slider{
-overflow:hidden;
-padding:20px 0 80px;
-}
-
-.slide-track{
+.banner{
+margin:50px 8%;
+height:400px;
+border-radius:30px;
+background:
+linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
 display:flex;
-width:calc(250px * 10);
-animation:scroll 20s linear infinite;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
 }
 
-.slide{
-width:250px;
-height:300px;
-margin:15px;
-border-radius:20px;
-overflow:hidden;
-flex-shrink:0;
+.banner h2{
+font-size:55px;
+font-weight:800;
 }
 
-.slide img{
-width:100%;
-height:100%;
-object-fit:cover;
+/* FEATURES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:0 8% 100px;
 }
 
-@keyframes scroll{
-0%{
-transform:translateX(0);
+.feature-box{
+background:#111;
+padding:35px;
+border-radius:22px;
+text-align:center;
+transition:0.3s;
 }
-100%{
-transform:translateX(calc(-250px * 5));
+
+.feature-box:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(0,255,174,0.2);
 }
+
+.feature-box h3{
+margin:18px 0 10px;
+font-size:24px;
+}
+
+.feature-box p{
+color:#bbb;
+line-height:1.7;
+}
+
+/* REVIEWS */
+
+.reviews{
+padding:0 8% 100px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.review-card{
+background:#111;
+padding:30px;
+border-radius:22px;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.review-card h4{
+margin-top:15px;
+color:#00ffae;
 }
 
 /* ABOUT */
@@ -231,15 +265,15 @@ transform:translateX(calc(-250px * 5));
 .about{
 padding:100px 10%;
 text-align:center;
-background:#0b0b0b;
+background:#0c0c0c;
 }
 
 .about p{
 max-width:850px;
 margin:auto;
 line-height:1.9;
-font-size:18px;
 color:#bbb;
+font-size:18px;
 }
 
 /* WHATSAPP */
@@ -249,47 +283,47 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-width:60px;
-height:60px;
+width:65px;
+height:65px;
 display:flex;
 justify-content:center;
 align-items:center;
 border-radius:50%;
-font-size:30px;
+font-size:32px;
 text-decoration:none;
 color:white;
-box-shadow:0 0 20px rgba(37,211,102,0.5);
+box-shadow:0 0 25px rgba(37,211,102,0.5);
 z-index:999;
 }
 
 /* FOOTER */
 
 footer{
-padding:35px;
-text-align:center;
 background:black;
-border-top:1px solid rgba(255,255,255,0.08);
+padding:40px;
+text-align:center;
 color:#777;
+border-top:1px solid rgba(255,255,255,0.08);
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-.hero h1{
-font-size:42px;
+.hero-content h1{
+font-size:45px;
 }
 
-.hero p{
+.hero-content p{
 font-size:16px;
 }
 
-.section-title{
-font-size:30px;
+.banner h2{
+font-size:34px;
 }
 
-nav{
-padding:18px 5%;
+.section-title{
+font-size:32px;
 }
 
 nav ul{
@@ -323,22 +357,22 @@ display:none;
 
 <div class="hero-content">
 
-<h1>Premium <span>DTF Polo</span><br>Collection 2025</h1>
+<h1>Luxury <span>DTF Polo</span><br>Streetwear 2025</h1>
 
 <p>
-স্টাইলিশ, ট্রেন্ডি এবং প্রিমিয়াম কোয়ালিটির DTF পোলো টি-শার্ট কালেকশন।
-বাংলাদেশের নতুন জেনারেশনের জন্য তৈরি।
+বাংলাদেশের সবচেয়ে স্টাইলিশ এবং প্রিমিয়াম DTF পোলো কালেকশন।
+নতুন জেনারেশনের জন্য ট্রেন্ডি ডিজাইন।
 </p>
 
-<a href="#products" class="hero-btn">Shop Now</a>
+<a href="#products" class="hero-btn">Explore Collection</a>
 
 </div>
 
 </section>
 
-<!-- PRODUCT SECTION -->
+<!-- PRODUCTS -->
 
-<h2 class="section-title" id="products">Latest Polo Collection</h2>
+<h2 class="section-title" id="products">Premium Collection</h2>
 
 <section class="products">
 
@@ -354,8 +388,8 @@ display:none;
 <div class="card">
 <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1200&auto=format&fit=crop">
 <div class="card-content">
-<h3>Streetwear Edition</h3>
-<div class="price">৳ 950</div>
+<h3>Luxury Streetwear</h3>
+<div class="price">৳ 990</div>
 <a href="https://wa.me/8801234567890" class="buy-btn">Order Now</a>
 </div>
 </div>
@@ -363,7 +397,7 @@ display:none;
 <div class="card">
 <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop">
 <div class="card-content">
-<h3>Luxury DTF Polo</h3>
+<h3>Modern DTF Edition</h3>
 <div class="price">৳ 1200</div>
 <a href="https://wa.me/8801234567890" class="buy-btn">Order Now</a>
 </div>
@@ -371,34 +405,62 @@ display:none;
 
 </section>
 
-<!-- SLIDER -->
+<!-- BANNER -->
 
-<h2 class="section-title">Trending Styles</h2>
+<section class="banner">
 
-<section class="slider">
+<h2>Wear The Future Of Fashion</h2>
 
-<div class="slide-track">
+</section>
 
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?q=80&w=1200&auto=format&fit=crop">
+<!-- FEATURES -->
+
+<h2 class="section-title">Why Choose Us</h2>
+
+<section class="features">
+
+<div class="feature-box">
+<h3>🔥 Premium Quality</h3>
+<p>উচ্চমানের ফেব্রিক এবং লং লাস্টিং DTF প্রিন্ট।</p>
 </div>
 
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop">
+<div class="feature-box">
+<h3>🚀 Fast Delivery</h3>
+<p>বাংলাদেশের যেকোনো জায়গায় দ্রুত ডেলিভারি।</p>
 </div>
 
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop">
+<div class="feature-box">
+<h3>💎 Luxury Design</h3>
+<p>স্টাইলিশ ও ট্রেন্ডি ডিজাইন যা আপনাকে আলাদা করবে।</p>
 </div>
 
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1200&auto=format&fit=crop">
+</section>
+
+<!-- REVIEWS -->
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<section class="reviews">
+
+<div class="review-card">
+<p>
+“একদম প্রিমিয়াম কোয়ালিটি। ফিটিং আর ডিজাইন অসাধারণ!”
+</p>
+<h4>— Rahim</h4>
 </div>
 
-<div class="slide">
-<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1200&auto=format&fit=crop">
+<div class="review-card">
+<p>
+“বাস্তবে আরও সুন্দর লাগে। ডেলিভারিও দ্রুত ছিল।”
+</p>
+<h4>— Fahim</h4>
 </div>
 
+<div class="review-card">
+<p>
+“বাংলাদেশে এরকম স্টাইলিশ পোলো কমই পাওয়া যায় 🔥”
+</p>
+<h4>— Tanvir</h4>
 </div>
 
 </section>
@@ -410,14 +472,14 @@ display:none;
 <h2 class="section-title">About Brand</h2>
 
 <p>
-Modern Streetwear বাংলাদেশের অন্যতম প্রিমিয়াম DTF পোলো টি-শার্ট ব্র্যান্ড।
-আমাদের লক্ষ্য হলো ট্রেন্ডি, স্টাইলিশ এবং কমফোর্টেবল ফ্যাশন সবার কাছে পৌঁছে দেওয়া।
-প্রতিটি ডিজাইন তৈরি করা হয় আধুনিক স্ট্রিট ফ্যাশনকে মাথায় রেখে।
+Modern Streetwear হলো বাংলাদেশের আধুনিক স্ট্রিট ফ্যাশন ব্র্যান্ড।
+আমরা প্রিমিয়াম DTF পোলো টি-শার্ট নিয়ে কাজ করি।
+প্রতিটি ডিজাইন নতুন জেনারেশনের ফ্যাশন ট্রেন্ড অনুসরণ করে তৈরি।
 </p>
 
 </section>
 
-<!-- WHATSAPP BUTTON -->
+<!-- WHATSAPP -->
 
 <a href="https://wa.me/8801234567890" class="whatsapp">💬</a>
 
@@ -425,7 +487,7 @@ Modern Streetwear বাংলাদেশের অন্যতম প্রি
 
 <footer>
 
-© 2025 Modern Streetwear — Premium Fashion Brand
+© 2025 Modern Streetwear — All Rights Reserved
 
 </footer>
 
