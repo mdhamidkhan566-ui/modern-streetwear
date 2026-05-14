@@ -1,165 +1,169 @@
-export default function LandingPage() {
-  return (
-    <div className="bg-white text-black">
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Polo Collection</title>
 
-      {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50 flex items-center px-6 md:px-16 py-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-          <div>
-            <span className="bg-black text-white px-5 py-2 rounded-full text-sm font-semibold">
-              🔥 Trending Fashion 2025
-            </span>
-
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mt-6 mb-6">
-              🌵 স্টাইলের সাথে কমফোর্ট — এবার আপনার টি-শার্টেই ওয়েস্টার্ন ভাইব!
-            </h1>
-
-            <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              রঙিন ফুল আর কাউবয় বুটের ইউনিক গ্রাফিক্সে তৈরি এই প্রিমিয়াম টি-শার্ট আপনাকে দেবে একদম ট্রেন্ডি,
-              স্টাইলিশ এবং নজরকাড়া লুক।
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-2xl text-lg font-bold shadow-lg transition">
-                🛒 আজই অর্ডার করুন
-              </button>
-
-              <button className="border-2 border-black hover:bg-black hover:text-white px-8 py-4 rounded-2xl text-lg font-bold transition">
-                📏 সাইজ চার্ট দেখুন
-              </button>
-            </div>
-
-            <div className="mt-8 flex flex-wrap gap-6 text-sm font-medium text-gray-700">
-              <span>✅ ১০০% প্রিমিয়াম কটন</span>
-              <span>✅ DTF High Quality Print</span>
-              <span>✅ ইউনিসেক্স ফিট</span>
-            </div>
-          </div>
-
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200"
-              alt="Premium T-Shirt"
-              className="w-full rounded-3xl shadow-2xl border"
-            />
-          </div>
-
-        </div>
-      </section>
-
-      {/* Why Buy */}
-      <section className="py-20 px-6 md:px-16 bg-white">
-        <div className="max-w-6xl mx-auto text-center">
-
-          <h2 className="text-4xl font-extrabold mb-4">
-            ✨ কেন এই টি-শার্টটি আপনার জন্য পারফেক্ট?
-          </h2>
-
-          <p className="text-gray-600 text-lg mb-14">
-            শুধু টি-শার্ট না — এটা আপনার ফ্যাশন স্টেটমেন্ট 🔥
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-            <div className="bg-orange-50 p-8 rounded-3xl shadow-md hover:shadow-xl transition">
-              <div className="text-5xl mb-4">🎨</div>
-              <h3 className="text-xl font-bold mb-3">ভাইরাল ট্রেন্ডি ডিজাইন</h3>
-              <p className="text-gray-600">
-                কাউবয় বুট + কালারফুল গ্রাফিক্স আপনাকে crowd থেকে আলাদা করবে।
-              </p>
-            </div>
-
-            <div className="bg-pink-50 p-8 rounded-3xl shadow-md hover:shadow-xl transition">
-              <div className="text-5xl mb-4">🧵</div>
-              <h3 className="text-xl font-bold mb-3">প্রিমিয়াম DTF প্রিন্ট</h3>
-              <p className="text-gray-600">
-                ধোয়ার পরেও প্রিন্ট নষ্ট হবে না।
-              </p>
-            </div>
-
-            <div className="bg-green-50 p-8 rounded-3xl shadow-md hover:shadow-xl transition">
-              <div className="text-5xl mb-4">☁️</div>
-              <h3 className="text-xl font-bold mb-3">১০০% সফট কটন</h3>
-              <p className="text-gray-600">
-                গরমে আরামদায়ক ও breathable fabric।
-              </p>
-            </div>
-
-            <div className="bg-yellow-50 p-8 rounded-3xl shadow-md hover:shadow-xl transition">
-              <div className="text-5xl mb-4">🌈</div>
-              <h3 className="text-xl font-bold mb-3">৬টি ট্রেন্ডি কালার</h3>
-              <p className="text-gray-600">
-                আপনার vibe অনুযায়ী রঙ বেছে নিন।
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 px-6 md:px-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto text-center">
-
-          <h2 className="text-4xl font-extrabold mb-14">
-            💬 কাস্টমাররা কী বলছেন?
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-
-            <div className="bg-white p-8 rounded-3xl shadow-lg">
-              <div className="text-yellow-500 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
-              <p className="text-gray-700 mb-6">
-                “প্রিন্টটা রিয়েল লাইফে আরও সুন্দর!”
-              </p>
-              <h4 className="font-bold text-lg">— নাবিলা রহমান</h4>
-            </div>
-
-            <div className="bg-white p-8 rounded-3xl shadow-lg">
-              <div className="text-yellow-500 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
-              <p className="text-gray-700 mb-6">
-                “ফ্যাব্রিকটা অনেক সফট ও কমফোর্টেবল।”
-              </p>
-              <h4 className="font-bold text-lg">— তাহসিন আহমেদ</h4>
-            </div>
-
-            <div className="bg-white p-8 rounded-3xl shadow-lg">
-              <div className="text-yellow-500 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
-              <p className="text-gray-700 mb-6">
-                “ডিজাইন দেখে সবাই জিজ্ঞেস করে কোথা থেকে নিয়েছি 😍”
-              </p>
-              <h4 className="font-bold text-lg">— আয়েশা ইসলাম</h4>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 px-6 md:px-16 bg-black text-white text-center">
-        <div className="max-w-4xl mx-auto">
-
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-            🚀 স্টক সীমিত — আজই আপনারটি অর্ডার করুন!
-          </h2>
-
-          <p className="text-xl text-gray-300 mb-10">
-            ট্রেন্ডি স্টাইল + প্রিমিয়াম কমফোর্ট + লং লাস্টিং প্রিন্ট।
-          </p>
-
-          <button className="bg-white text-black hover:bg-gray-200 px-10 py-5 rounded-2xl text-xl font-bold shadow-xl transition">
-            🛒 আজই অর্ডার করুন
-          </button>
-
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-100 py-8 text-center text-gray-600 text-sm">
-        © 2025 Premium Fashion Collection — Designed for Trendsetters ✨
-      </footer>
-
-    </div>
-  );
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
+
+body{
+background:#050505;
+color:white;
+}
+
+header{
+padding:25px;
+text-align:center;
+background:black;
+border-bottom:1px solid #222;
+}
+
+header h1{
+font-size:38px;
+color:#fff;
+}
+
+.hero{
+padding:60px 20px;
+text-align:center;
+}
+
+.hero h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.hero p{
+color:#aaa;
+font-size:18px;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:white;
+color:black;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#999;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+padding:50px 20px;
+}
+
+.card{
+background:#111;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.5);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+margin-bottom:10px;
+}
+
+.price{
+color:#00ff99;
+font-size:22px;
+font-weight:bold;
+margin-top:10px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🔥 Premium Polo Collection</h1>
+</header>
+
+<section class="hero">
+<h2>স্টাইলিশ DTF পোলো টি-শার্ট</h2>
+<p>
+বাংলাদেশের সবচেয়ে ট্রেন্ডি ও প্রিমিয়াম কালেকশন।
+সুপার সফট ফেব্রিক + হাই কোয়ালিটি DTF প্রিন্ট।
+</p>
+
+<a href="#" class="btn">🛒 এখনই অর্ডার করুন</a>
+</section>
+
+<section class="products">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+<div class="card-content">
+<h3>Black Premium Polo</h3>
+<p>স্টাইলিশ ব্ল্যাক পোলো টি-শার্ট</p>
+<div class="price">৳ ৮৫০</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c">
+<div class="card-content">
+<h3>Luxury White Polo</h3>
+<p>প্রিমিয়াম DTF কালেকশন</p>
+<div class="price">৳ ৯৫০</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+<div class="card-content">
+<h3>Modern Streetwear Polo</h3>
+<p>নতুন ট্রেন্ডিং ডিজাইন</p>
+<div class="price">৳ ১০৫০</div>
+</div>
+</div>
+
+</section>
+
+<footer>
+© 2025 Premium Fashion Bangladesh
+</footer>
+
+</body>
+</html>
